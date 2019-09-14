@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!--Html code-->
+<body>
+    <div>
+        <h1>TIP CALCULATOR</h1>
+        <form>
+        <p>How much was your bill?</p>
+        <p>$ <input id="bamt" type="text" placeholder="Bill Amount"></p>
+        <p>How was your service?</p>
+        <center><select id="service">
+            <option disabled selected value="0">Choose an Option</option>
+            <option value="0.3">30% -Outstanding</option>
+            <option value="0.2">20&#37; &#45; Good</option>
+            <option value="0.15">15&#37; &#45; It was OK</option>
+            <option value="0.1">10&#37; &#45; Bad</option>
+            <option value="0.05">5&#37; &#45; Terrible</option>
+        </select></center>
+        <p>How many people are sharing the Bill?</p>
+        <p><input id="pep" type="text" placeholder="Number of People">People</p>
+         </form>
+         
+<!--         button starts here-->
+         <center><button onclick="totalamt()">Calculate</button></center>
+<!--         button ends here-->
+         <center><p id="tip"></p></center>
+    </div>
+    <!--html code ends-->
+    
+    
+<!--    js code starts here-->
+    <script>
+      function totalamt(){
+          var billamt=document.getElementById("bamt").value;
+          var option=document.getElementById("service").value;
+          var people=document.getElementById("pep").value;
+          
+          if (billamt === "" || option == 0 || people==0) {
+           alert("Please enter values or you have entered wrong values and number of people cannot be zero");
+          }
+           var total=(billamt * option)/people;
+           total = Math.round(total * 100) / 100;
+           document.getElementById("tip").innerHTML=total;
+      }
+    </script>
+<!--    js code ends here-->
+
+
+
+</body>
+</html>

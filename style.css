@@ -1,0 +1,32 @@
+body{background-color: #421a1a;}
+
+div{margin-top: 6%;
+border-radius:25px;
+margin-left:30%;
+margin-right:30%;
+background-color:white;
+padding-bottom:15px;}
+
+div h1{color:white;
+font-weight: bold;
+background-color: black;
+text-align: center;
+padding:5px;
+border-radius:5px;}
+
+div p{font-size: 30px;
+text-align: center;}
+
+div input,select{font-size:30px;
+border-radius:20px;
+text-align: center;}
+
+div button{font-size:40px;
+background-color:#a32027;
+text-align: center;
+padding:10px;
+color:white;
+border-radius:10px;}
+
+div button:hover{color:#cc535a;
+padding:15px;}
